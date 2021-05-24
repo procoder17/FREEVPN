@@ -1,0 +1,19 @@
+LAYOUT(FreeVpnClientLayout, 312, 392)
+	ITEM(Upp::StaticText, dv___0, SetText(t_("SERVER")).LeftPosZ(28, 40).TopPosZ(40, 16))
+	ITEM(Upp::EditString, server_ip, LeftPosZ(68, 96).TopPosZ(40, 19))
+	ITEM(Upp::StaticText, dv___2, SetText(t_("PORT")).LeftPosZ(180, 32).TopPosZ(40, 19))
+	ITEM(Upp::EditInt, server_port, LeftPosZ(212, 72).TopPosZ(40, 19))
+	ITEM(Upp::Button, btn_connect, SetLabel(t_("Connect")).LeftPosZ(52, 108).TopPosZ(340, 24))
+	ITEM(Upp::Button, btn_disconnect, SetLabel(t_("Disconnect")).LeftPosZ(168, 104).TopPosZ(340, 24))
+	ITEM(Upp::LineEdit, logview, LeftPosZ(20, 24).TopPosZ(344, 19))
+	ITEM(Upp::Button, btn_pos, LeftPosZ(92, 124).TopPosZ(152, 108))
+	ITEM(Upp::StaticText, txt_status, SetAlign(ALIGN_CENTER).SetFont(StdFontZ(14).Bold()).LeftPosZ(88, 128).TopPosZ(284, 19))
+	ITEM(Upp::Button, btn_quit, SetLabel(t_("Quit")).LeftPosZ(240, 68).TopPosZ(368, 20))
+END_LAYOUT
+
+LAYOUT(SignInLayout, 296, 384)
+	ITEM(Upp::Label, dv___0, SetLabel(t_("Enter your activation code below.")).SetFont(SerifZ(15).Bold()).LeftPosZ(24, 244).TopPosZ(104, 16))
+	ITEM(Upp::Button, btn_continue, SetLabel(t_("Sign In")).SetFont(SerifZ(15).Bold()).LeftPosZ(24, 244).TopPosZ(212, 28))
+	ITEM(Upp::EditString, txt_code, SetFont(StdFontZ(14)).LeftPosZ(24, 244).TopPosZ(144, 28))
+END_LAYOUT
+

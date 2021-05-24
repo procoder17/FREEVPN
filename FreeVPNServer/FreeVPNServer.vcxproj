@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{BBCA60E8-CEEE-42F9-B4B2-790BCF09F1A1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FreeVPNServer</RootNamespace>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>HAVE_EV;HAVE_WHQL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Common\;..;..\include;..\Common\SSL</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Common\SSL\win\$(Platform)_$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Newdev.lib;psapi.lib;libsslMT.lib;libcryptoMT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_SERVER_;CPU_64;HAVE_EV;HAVE_WHQL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Common\;..;..\include;..\Common\SSL\include64;..\Common\JWT;..\Common\JANSSON;</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\Common\SSL\win\$(Platform)_$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Newdev.lib;psapi.lib;libsslMT.lib;libcryptoMT.lib;setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>HAVE_EV;HAVE_WHQL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Common\;..;..\include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>false</StringPooling>
+      <ExceptionHandling />
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>psapi.lib;Newdev.lib;libsslMT.lib;libcryptoMT.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Common\openssl\win\$(Platform)_$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_SERVER_;CPU_64;HAVE_EV;HAVE_WHQL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Common\;..;..\include;..\Common\SSL\include64;..\Common\JWT;..\Common\JANSSON;</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Common\SSL\win\$(Platform)_$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Newdev.lib;psapi.lib;libsslMT.lib;libcryptoMT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Cedar\Cedar.c" />
+    <ClCompile Include="..\Common\Cedar\CedarPch.c" />
+    <ClCompile Include="..\Common\Cedar\Connection.c" />
+    <ClCompile Include="..\Common\Cedar\SecureNAT.c" />
+    <ClCompile Include="..\Common\Cedar\Virtual.c" />
+    <ClCompile Include="..\Common\ECDH\curve25519-donna.c" />
+    <ClCompile Include="..\Common\JANSSON\dump.c" />
+    <ClCompile Include="..\Common\JANSSON\error.c" />
+    <ClCompile Include="..\Common\JANSSON\hashtable.c" />
+    <ClCompile Include="..\Common\JANSSON\hashtable_seed.c" />
+    <ClCompile Include="..\Common\JANSSON\load.c" />
+    <ClCompile Include="..\Common\JANSSON\jansson_memory.c" />
+    <ClCompile Include="..\Common\JANSSON\pack_unpack.c" />
+    <ClCompile Include="..\Common\JANSSON\strbuffer.c" />
+    <ClCompile Include="..\Common\JANSSON\strconv.c" />
+    <ClCompile Include="..\Common\JANSSON\utf.c" />
+    <ClCompile Include="..\Common\JANSSON\value.c" />
+    <ClCompile Include="..\Common\JANSSON\version.c" />
+    <ClCompile Include="..\Common\JWT\base64.c" />
+    <ClCompile Include="..\Common\JWT\jwt-openssl.c" />
+    <ClCompile Include="..\Common\JWT\jwt.c" />
+    <ClCompile Include="..\Common\JWT\main-auth.c" />
+    <ClCompile Include="..\Common\Mayaqua\Cfg.c" />
+    <ClCompile Include="..\Common\Mayaqua\Encrypt.c" />
+    <ClCompile Include="..\Common\Mayaqua\FileIO.c" />
+    <ClCompile Include="..\Common\Mayaqua\Internat.c" />
+    <ClCompile Include="..\Common\Mayaqua\Kernel.c" />
+    <ClCompile Include="..\Common\Mayaqua\Mayaqua.c" />
+    <ClCompile Include="..\Common\Mayaqua\Memory.c" />
+    <ClCompile Include="..\Common\Mayaqua\Microsoft.c" />
+    <ClCompile Include="..\Common\Mayaqua\Network.c" />
+    <ClCompile Include="..\Common\Mayaqua\Object.c" />
+    <ClCompile Include="..\Common\Mayaqua\OS.c" />
+    <ClCompile Include="..\Common\Mayaqua\Pack.c" />
+    <ClCompile Include="..\Common\Mayaqua\Secure.c" />
+    <ClCompile Include="..\Common\Mayaqua\Str.c" />
+    <ClCompile Include="..\Common\Mayaqua\Table.c" />
+    <ClCompile Include="..\Common\Mayaqua\TcpIp.c" />
+    <ClCompile Include="..\Common\Mayaqua\Tick64.c" />
+    <ClCompile Include="..\Common\Mayaqua\Tracking.c" />
+    <ClCompile Include="..\Common\Mayaqua\Unix.c" />
+    <ClCompile Include="..\Common\Mayaqua\Win32.c" />
+    <ClCompile Include="..\src\cc20.c" />
+    <ClCompile Include="..\src\n2n.c" />
+    <ClCompile Include="..\src\n2n_keyfile.c" />
+    <ClCompile Include="..\src\sn.c" />
+    <ClCompile Include="..\src\transform_cc20.c" />
+    <ClCompile Include="..\src\wire.c" />
+    <ClCompile Include="..\win32\getopt.c" />
+    <ClCompile Include="..\win32\getopt1.c" />
+    <ClCompile Include="..\win32\installation.c" />
+    <ClCompile Include="..\win32\version-msvc.c" />
+    <ClCompile Include="..\win32\wintap.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Cedar\Cedar.h" />
+    <ClInclude Include="..\Common\Cedar\CedarPch.h" />
+    <ClInclude Include="..\Common\Cedar\CedarType.h" />
+    <ClInclude Include="..\Common\Cedar\Connection.h" />
+    <ClInclude Include="..\Common\Cedar\Hub.h" />
+    <ClInclude Include="..\Common\Cedar\Nat.h" />
+    <ClInclude Include="..\Common\Cedar\SecureNAT.h" />
+    <ClInclude Include="..\Common\Cedar\Session.h" />
+    <ClInclude Include="..\Common\Cedar\Virtual.h" />
+    <ClInclude Include="..\Common\ECDH\curve25519.h" />
+    <ClInclude Include="..\Common\GlobalConst.h" />
+    <ClInclude Include="..\Common\JANSSON\hashtable.h" />
+    <ClInclude Include="..\Common\JANSSON\jansson.h" />
+    <ClInclude Include="..\Common\JANSSON\jansson_config.h" />
+    <ClInclude Include="..\Common\JANSSON\jansson_private.h" />
+    <ClInclude Include="..\Common\JANSSON\lookup3.h" />
+    <ClInclude Include="..\Common\JANSSON\strbuffer.h" />
+    <ClInclude Include="..\Common\JANSSON\utf.h" />
+    <ClInclude Include="..\Common\JWT\base64.h" />
+    <ClInclude Include="..\Common\JWT\jwt-private.h" />
+    <ClInclude Include="..\Common\JWT\jwt.h" />
+    <ClInclude Include="..\Common\Mayaqua\Cfg.h" />
+    <ClInclude Include="..\Common\Mayaqua\cryptoki.h" />
+    <ClInclude Include="..\Common\Mayaqua\Encrypt.h" />
+    <ClInclude Include="..\Common\Mayaqua\FileIO.h" />
+    <ClInclude Include="..\Common\Mayaqua\Internat.h" />
+    <ClInclude Include="..\Common\Mayaqua\Kernel.h" />
+    <ClInclude Include="..\Common\Mayaqua\Mayaqua.h" />
+    <ClInclude Include="..\Common\Mayaqua\MayaType.h" />
+    <ClInclude Include="..\Common\Mayaqua\Memory.h" />
+    <ClInclude Include="..\Common\Mayaqua\Microsoft.h" />
+    <ClInclude Include="..\Common\Mayaqua\Network.h" />
+    <ClInclude Include="..\Common\Mayaqua\Object.h" />
+    <ClInclude Include="..\Common\Mayaqua\OS.h" />
+    <ClInclude Include="..\Common\Mayaqua\Pack.h" />
+    <ClInclude Include="..\Common\Mayaqua\pkcs11.h" />
+    <ClInclude Include="..\Common\Mayaqua\pkcs11f.h" />
+    <ClInclude Include="..\Common\Mayaqua\pkcs11t.h" />
+    <ClInclude Include="..\Common\Mayaqua\Secure.h" />
+    <ClInclude Include="..\Common\Mayaqua\Str.h" />
+    <ClInclude Include="..\Common\Mayaqua\Table.h" />
+    <ClInclude Include="..\Common\Mayaqua\TcpIp.h" />
+    <ClInclude Include="..\Common\Mayaqua\Tick64.h" />
+    <ClInclude Include="..\Common\Mayaqua\Tracking.h" />
+    <ClInclude Include="..\Common\Mayaqua\TunTap.h" />
+    <ClInclude Include="..\Common\Mayaqua\Unix.h" />
+    <ClInclude Include="..\Common\Mayaqua\Win32.h" />
+    <ClInclude Include="..\Common\Mayaqua\zconf.h" />
+    <ClInclude Include="..\Common\Mayaqua\zlib.h" />
+    <ClInclude Include="..\Common\openssl\aes.h" />
+    <ClInclude Include="..\Common\openssl\asn1.h" />
+    <ClInclude Include="..\Common\openssl\asn1err.h" />
+    <ClInclude Include="..\Common\openssl\asn1t.h" />
+    <ClInclude Include="..\Common\openssl\asn1_mac.h" />
+    <ClInclude Include="..\Common\openssl\async.h" />
+    <ClInclude Include="..\Common\openssl\asyncerr.h" />
+    <ClInclude Include="..\Common\openssl\bio.h" />
+    <ClInclude Include="..\Common\openssl\bioerr.h" />
+    <ClInclude Include="..\Common\openssl\blowfish.h" />
+    <ClInclude Include="..\Common\openssl\bn.h" />
+    <ClInclude Include="..\Common\openssl\bnerr.h" />
+    <ClInclude Include="..\Common\openssl\buffer.h" />
+    <ClInclude Include="..\Common\openssl\buffererr.h" />
+    <ClInclude Include="..\Common\openssl\camellia.h" />
+    <ClInclude Include="..\Common\openssl\cast.h" />
+    <ClInclude Include="..\Common\openssl\cmac.h" />
+    <ClInclude Include="..\Common\openssl\cms.h" />
+    <ClInclude Include="..\Common\openssl\cmserr.h" />
+    <ClInclude Include="..\Common\openssl\comp.h" />
+    <ClInclude Include="..\Common\openssl\comperr.h" />
+    <ClInclude Include="..\Common\openssl\conf.h" />
+    <ClInclude Include="..\Common\openssl\conferr.h" />
+    <ClInclude Include="..\Common\openssl\conf_api.h" />
+    <ClInclude Include="..\Common\openssl\crypto.h" />
+    <ClInclude Include="..\Common\openssl\cryptoerr.h" />
+    <ClInclude Include="..\Common\openssl\ct.h" />
+    <ClInclude Include="..\Common\openssl\cterr.h" />
+    <ClInclude Include="..\Common\openssl\des.h" />
+    <ClInclude Include="..\Common\openssl\dh.h" />
+    <ClInclude Include="..\Common\openssl\dherr.h" />
+    <ClInclude Include="..\Common\openssl\dsa.h" />
+    <ClInclude Include="..\Common\openssl\dsaerr.h" />
+    <ClInclude Include="..\Common\openssl\dtls1.h" />
+    <ClInclude Include="..\Common\openssl\ebcdic.h" />
+    <ClInclude Include="..\Common\openssl\ec.h" />
+    <ClInclude Include="..\Common\openssl\ecdh.h" />
+    <ClInclude Include="..\Common\openssl\ecdsa.h" />
+    <ClInclude Include="..\Common\openssl\ecerr.h" />
+    <ClInclude Include="..\Common\openssl\engine.h" />
+    <ClInclude Include="..\Common\openssl\engineerr.h" />
+    <ClInclude Include="..\Common\openssl\err.h" />
+    <ClInclude Include="..\Common\openssl\evp.h" />
+    <ClInclude Include="..\Common\openssl\evperr.h" />
+    <ClInclude Include="..\Common\openssl\e_os2.h" />
+    <ClInclude Include="..\Common\openssl\hmac.h" />
+    <ClInclude Include="..\Common\openssl\idea.h" />
+    <ClInclude Include="..\Common\openssl\kdf.h" />
+    <ClInclude Include="..\Common\openssl\kdferr.h" />
+    <ClInclude Include="..\Common\openssl\lhash.h" />
+    <ClInclude Include="..\Common\openssl\md2.h" />
+    <ClInclude Include="..\Common\openssl\md4.h" />
+    <ClInclude Include="..\Common\openssl\md5.h" />
+    <ClInclude Include="..\Common\openssl\mdc2.h" />
+    <ClInclude Include="..\Common\openssl\modes.h" />
+    <ClInclude Include="..\Common\openssl\objects.h" />
+    <ClInclude Include="..\Common\openssl\objectserr.h" />
+    <ClInclude Include="..\Common\openssl\obj_mac.h" />
+    <ClInclude Include="..\Common\openssl\ocsp.h" />
+    <ClInclude Include="..\Common\openssl\ocsperr.h" />
+    <ClInclude Include="..\Common\openssl\opensslconf.h" />
+    <ClInclude Include="..\Common\openssl\opensslv.h" />
+    <ClInclude Include="..\Common\openssl\ossl_typ.h" />
+    <ClInclude Include="..\Common\openssl\pem.h" />
+    <ClInclude Include="..\Common\openssl\pem2.h" />
+    <ClInclude Include="..\Common\openssl\pemerr.h" />
+    <ClInclude Include="..\Common\openssl\pkcs12.h" />
+    <ClInclude Include="..\Common\openssl\pkcs12err.h" />
+    <ClInclude Include="..\Common\openssl\pkcs7.h" />
+    <ClInclude Include="..\Common\openssl\pkcs7err.h" />
+    <ClInclude Include="..\Common\openssl\rand.h" />
+    <ClInclude Include="..\Common\openssl\randerr.h" />
+    <ClInclude Include="..\Common\openssl\rand_drbg.h" />
+    <ClInclude Include="..\Common\openssl\rc2.h" />
+    <ClInclude Include="..\Common\openssl\rc4.h" />
+    <ClInclude Include="..\Common\openssl\rc5.h" />
+    <ClInclude Include="..\Common\openssl\ripemd.h" />
+    <ClInclude Include="..\Common\openssl\rsa.h" />
+    <ClInclude Include="..\Common\openssl\rsaerr.h" />
+    <ClInclude Include="..\Common\openssl\safestack.h" />
+    <ClInclude Include="..\Common\openssl\seed.h" />
+    <ClInclude Include="..\Common\openssl\sha.h" />
+    <ClInclude Include="..\Common\openssl\srp.h" />
+    <ClInclude Include="..\Common\openssl\srtp.h" />
+    <ClInclude Include="..\Common\openssl\ssl.h" />
+    <ClInclude Include="..\Common\openssl\ssl2.h" />
+    <ClInclude Include="..\Common\openssl\ssl3.h" />
+    <ClInclude Include="..\Common\openssl\sslerr.h" />
+    <ClInclude Include="..\Common\openssl\stack.h" />
+    <ClInclude Include="..\Common\openssl\store.h" />
+    <ClInclude Include="..\Common\openssl\storeerr.h" />
+    <ClInclude Include="..\Common\openssl\symhacks.h" />
+    <ClInclude Include="..\Common\openssl\tls1.h" />
+    <ClInclude Include="..\Common\openssl\ts.h" />
+    <ClInclude Include="..\Common\openssl\tserr.h" />
+    <ClInclude Include="..\Common\openssl\txt_db.h" />
+    <ClInclude Include="..\Common\openssl\ui.h" />
+    <ClInclude Include="..\Common\openssl\uierr.h" />
+    <ClInclude Include="..\Common\openssl\whrlpool.h" />
+    <ClInclude Include="..\Common\openssl\x509.h" />
+    <ClInclude Include="..\Common\openssl\x509err.h" />
+    <ClInclude Include="..\Common\openssl\x509v3.h" />
+    <ClInclude Include="..\Common\openssl\x509v3err.h" />
+    <ClInclude Include="..\Common\openssl\x509_vfy.h" />
+    <ClInclude Include="..\Common\openssl\__DECC_INCLUDE_EPILOGUE.H" />
+    <ClInclude Include="..\Common\openssl\__DECC_INCLUDE_PROLOGUE.H" />
+    <ClInclude Include="..\include\cc20.h" />
+    <ClInclude Include="..\include\lzoconf.h" />
+    <ClInclude Include="..\include\lzodefs.h" />
+    <ClInclude Include="..\include\minilzo.h" />
+    <ClInclude Include="..\include\n2n.h" />
+    <ClInclude Include="..\include\n2n_keyfile.h" />
+    <ClInclude Include="..\include\n2n_transforms.h" />
+    <ClInclude Include="..\include\n2n_wire.h" />
+    <ClInclude Include="..\include\portable_endian.h" />
+    <ClInclude Include="..\include\uthash.h" />
+    <ClInclude Include="..\win32\getopt.h" />
+    <ClInclude Include="..\win32\installation.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="Win32\n2n_win32.h" />
+    <ClInclude Include="Win32\winconfig.h" />
+    <ClInclude Include="Win32\wintap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\openssl\LICENSE" />
+    <None Include="Win32\driver\devcon.exe" />
+    <None Include="Win32\driver\OemWin2k.inf">
+      <DeploymentContent>true</DeploymentContent>
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Win32\driver\tap0901.cat">
+      <DeploymentContent>true</DeploymentContent>
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Win32\driver\tap0901.sys">
+      <DeploymentContent>true</DeploymentContent>
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

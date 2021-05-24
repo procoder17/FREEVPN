@@ -1,0 +1,8 @@
+.$tmp
+.bak
+build-*
+CMakeLists.txt.user
+.DS_Store
+Debug
+Release
+.vs

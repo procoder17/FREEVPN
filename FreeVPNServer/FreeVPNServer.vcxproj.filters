@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Cedar">
+      <UniqueIdentifier>{ad1ad764-cd47-4943-b889-88a6b1eabc77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mayaqua">
+      <UniqueIdentifier>{87770807-ca04-48d5-b7a0-c068f1ad3a08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cedar">
+      <UniqueIdentifier>{2a4efe36-dcad-4642-a76c-b11bb7facd47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mayaqua">
+      <UniqueIdentifier>{f36eb1b3-ca82-4fb2-8192-3b03b0973e8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Win32">
+      <UniqueIdentifier>{7b537115-c34b-48bd-b82e-a3c752615b02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Win32">
+      <UniqueIdentifier>{fa5355eb-cee9-4fde-b365-2228cdc0b98b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\openssl">
+      <UniqueIdentifier>{2ba57bc2-23de-441e-8aad-0dcfad4ce8b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\JWT">
+      <UniqueIdentifier>{2dd4c397-7036-4137-b31f-40f34622a59f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\JANSSON">
+      <UniqueIdentifier>{1a6bf400-ecc4-4bde-8610-7d1801226c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\JANSSON">
+      <UniqueIdentifier>{ad4ab373-305b-4a98-82fd-8b2c6cd526de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ECDH">
+      <UniqueIdentifier>{cdcb7355-c73e-4689-89d2-78cebb9588ca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Cedar\Cedar.c">
+      <Filter>Source Files\Cedar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Cedar\CedarPch.c">
+      <Filter>Source Files\Cedar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Cedar\Connection.c">
+      <Filter>Source Files\Cedar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Cedar\SecureNAT.c">
+      <Filter>Source Files\Cedar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Cedar\Virtual.c">
+      <Filter>Source Files\Cedar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Cfg.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Encrypt.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\FileIO.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Internat.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Kernel.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Mayaqua.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Memory.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Microsoft.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Network.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Object.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\OS.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Pack.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Secure.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Str.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Table.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\TcpIp.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Tick64.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Tracking.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Unix.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mayaqua\Win32.c">
+      <Filter>Source Files\Mayaqua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cc20.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\transform_cc20.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\wire.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\n2n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\n2n_keyfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JWT\base64.c">
+      <Filter>Source Files\JWT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JWT\jwt.c">
+      <Filter>Source Files\JWT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JWT\jwt-openssl.c">
+      <Filter>Source Files\JWT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\dump.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\error.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\hashtable.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\hashtable_seed.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\load.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\pack_unpack.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\strbuffer.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\strconv.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\utf.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\value.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\version.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JANSSON\jansson_memory.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JWT\main-auth.c">
+      <Filter>Source Files\JANSSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ECDH\curve25519-donna.c">
+      <Filter>Source Files\ECDH</Filter>
+    </ClCompile>
+    <ClCompile Include="..\win32\getopt.c">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\win32\getopt1.c">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\win32\wintap.c">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\win32\installation.c">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\win32\version-msvc.c">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Win32\wintap.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32\n2n_win32.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32\winconfig.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\Cedar.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\CedarPch.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\CedarType.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\Connection.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\Hub.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\Nat.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\SecureNAT.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\Session.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\Virtual.h">
+      <Filter>Header Files\Cedar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Cfg.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\cryptoki.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Encrypt.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\FileIO.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Internat.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Kernel.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Mayaqua.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\MayaType.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Memory.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Microsoft.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Network.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Object.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\OS.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Pack.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\pkcs11.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\pkcs11f.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\pkcs11t.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Secure.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Str.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Table.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\TcpIp.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Tick64.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Tracking.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\TunTap.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Unix.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\Win32.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\zconf.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mayaqua\zlib.h">
+      <Filter>Header Files\Mayaqua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\__DECC_INCLUDE_EPILOGUE.H">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\__DECC_INCLUDE_PROLOGUE.H">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\aes.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\asn1.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\asn1_mac.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\asn1err.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\asn1t.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\async.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\asyncerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\bio.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\bioerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\blowfish.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\bn.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\bnerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\buffer.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\buffererr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\camellia.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\cast.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\cmac.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\cms.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\cmserr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\comp.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\comperr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\conf.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\conf_api.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\conferr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\crypto.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\cryptoerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ct.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\cterr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\des.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\dh.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\dherr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\dsa.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\dsaerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\dtls1.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\e_os2.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ebcdic.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ec.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ecdh.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ecdsa.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ecerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\engine.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\engineerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\err.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\evp.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\evperr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\hmac.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\idea.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\kdf.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\kdferr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\lhash.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\md2.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\md4.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\md5.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\mdc2.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\modes.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\obj_mac.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\objects.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\objectserr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ocsp.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ocsperr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\opensslconf.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\opensslv.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ossl_typ.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\pem.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\pem2.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\pemerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\pkcs7.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\pkcs7err.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\pkcs12.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\pkcs12err.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\rand.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\rand_drbg.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\randerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\rc2.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\rc4.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\rc5.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ripemd.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\rsa.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\rsaerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\safestack.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\seed.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\sha.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\srp.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\srtp.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ssl.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ssl2.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ssl3.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\sslerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\stack.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\store.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\storeerr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\symhacks.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\tls1.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ts.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\tserr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\txt_db.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\ui.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\uierr.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\whrlpool.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\x509.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\x509_vfy.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\x509err.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\x509v3.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\openssl\x509v3err.h">
+      <Filter>Header Files\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GlobalConst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cc20.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\lzoconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\lzodefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\minilzo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\n2n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\n2n_keyfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\n2n_transforms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\n2n_wire.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\uthash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\portable_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\win32\installation.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JWT\base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JWT\jwt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JWT\jwt-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JANSSON\hashtable.h">
+      <Filter>Header Files\JANSSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JANSSON\jansson.h">
+      <Filter>Header Files\JANSSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JANSSON\jansson_private.h">
+      <Filter>Header Files\JANSSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JANSSON\lookup3.h">
+      <Filter>Header Files\JANSSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JANSSON\strbuffer.h">
+      <Filter>Header Files\JANSSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JANSSON\utf.h">
+      <Filter>Header Files\JANSSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JANSSON\jansson_config.h">
+      <Filter>Header Files\JANSSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ECDH\curve25519.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\win32\getopt.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\openssl\LICENSE">
+      <Filter>Header Files\openssl</Filter>
+    </None>
+    <None Include="Win32\driver\OemWin2k.inf" />
+    <None Include="Win32\driver\tap0901.cat" />
+    <None Include="Win32\driver\tap0901.sys" />
+    <None Include="Win32\driver\devcon.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
