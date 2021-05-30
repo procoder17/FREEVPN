@@ -112,6 +112,7 @@ int SignInWnd::PullFilterLists()
 {
 	HttpRequest req;
 	req.RequestTimeout(3000).MaxRetries(0);
+	//req.Url("https://hk3.hanatech.io:8000/").Timeout(0);
 	req.Url("https://dev.deliciousbrains.com:8000/filterlist").Timeout(0);
 	HttpRequest::Trace();
 	req.ContentType("application/json");
@@ -177,10 +178,11 @@ int SignInWnd::Verify()
 	
 	HttpRequest req;
 	req.RequestTimeout(3000).MaxRetries(0);
+	//req.Url("https://hk3.hanatech.io:8000/").Timeout(0);
 	req.Url("https://dev.deliciousbrains.com:8000/").Timeout(0);
 	HttpRequest::Trace();
 	req.ContentType("application/json");
-	req.PostData("{\"email\":\"test@test.com\", \"password\":\"test\"}");
+	req.PostData("{\"email\":\"procoder17@outlook.com\", \"password\":\"leonardo\"}");
 	req.POST();
 
 	//String token = "";

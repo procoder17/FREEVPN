@@ -2102,7 +2102,9 @@ UNI_TOKEN_LIST *UnixUniParseToken(wchar_t *src, wchar_t *separator)
 }
 
 // Parse the token
+#ifndef _SERVER_
 #define _MSC_VER 1800
+#endif
 UNI_TOKEN_LIST *UniParseToken(wchar_t *src, wchar_t *separator)
 {
 #ifdef	OS_WIN32

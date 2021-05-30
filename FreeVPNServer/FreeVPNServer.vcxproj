@@ -188,7 +188,7 @@
   <ItemGroup>
     <ClCompile Include="..\Common\Cedar\Cedar.c" />
     <ClCompile Include="..\Common\Cedar\CedarPch.c" />
-    <ClCompile Include="..\Common\Cedar\Connection.c" />
+    <ClCompile Include="..\Common\Cedar\MyConnection.c" />
     <ClCompile Include="..\Common\Cedar\SecureNAT.c" />
     <ClCompile Include="..\Common\Cedar\Virtual.c" />
     <ClCompile Include="..\Common\ECDH\curve25519-donna.c" />
@@ -244,11 +244,9 @@
     <ClInclude Include="..\Common\Cedar\Cedar.h" />
     <ClInclude Include="..\Common\Cedar\CedarPch.h" />
     <ClInclude Include="..\Common\Cedar\CedarType.h" />
-    <ClInclude Include="..\Common\Cedar\Connection.h" />
-    <ClInclude Include="..\Common\Cedar\Hub.h" />
+    <ClInclude Include="..\Common\Cedar\MyConnection.h" />
     <ClInclude Include="..\Common\Cedar\Nat.h" />
     <ClInclude Include="..\Common\Cedar\SecureNAT.h" />
-    <ClInclude Include="..\Common\Cedar\Session.h" />
     <ClInclude Include="..\Common\Cedar\Virtual.h" />
     <ClInclude Include="..\Common\ECDH\curve25519.h" />
     <ClInclude Include="..\Common\GlobalConst.h" />

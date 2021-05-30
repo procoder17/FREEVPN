@@ -950,15 +950,13 @@ struct ROUTE_TRACKING
 // Type
 #include <Cedar/CedarType.h>
 // Connection management
-#include <Cedar/Connection.h>
+#include <Cedar/MyConnection.h>
 // Session Management
-#include <Cedar/Session.h>
 // User-mode virtual host
 #include <Cedar/Virtual.h>
 // SecureNAT
 #include <Cedar/SecureNAT.h>
 // Digital watermark
-#include <Cedar/Hub.h>
 
 #ifdef	OS_WIN32
 #endif	// OS_WIN32

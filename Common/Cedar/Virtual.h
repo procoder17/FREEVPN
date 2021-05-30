@@ -365,6 +365,15 @@ struct DNS_PARSED_PACKET
 	char Hostname[128];
 };
 
+struct HUB_OPTION
+{
+	UINT SecureNAT_MaxTcpSessionsPerIp;		// Maximum number of TCP sessions per IP address
+	UINT SecureNAT_MaxTcpSynSentPerIp;		// Maximum number of TCP sessions of SYN_SENT state per IP address
+	UINT SecureNAT_MaxUdpSessionsPerIp;		// Maximum number of UDP sessions per IP address
+	UINT SecureNAT_MaxDnsSessionsPerIp;		// Maximum number of DNS sessions per IP address
+	UINT SecureNAT_MaxIcmpSessionsPerIp;
+};
+
 void NLog(VH *v, char *name, ...);
 
 bool VirtualInit(VH *v);

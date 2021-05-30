@@ -54,9 +54,6 @@
     <ClCompile Include="..\Common\Cedar\CedarPch.c">
       <Filter>Source Files\Cedar</Filter>
     </ClCompile>
-    <ClCompile Include="..\Common\Cedar\Connection.c">
-      <Filter>Source Files\Cedar</Filter>
-    </ClCompile>
     <ClCompile Include="..\Common\Cedar\SecureNAT.c">
       <Filter>Source Files\Cedar</Filter>
     </ClCompile>
@@ -207,6 +204,9 @@
     <ClCompile Include="..\win32\version-msvc.c">
       <Filter>Source Files\Win32</Filter>
     </ClCompile>
+    <ClCompile Include="..\Common\Cedar\MyConnection.c">
+      <Filter>Source Files\Cedar</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Win32\wintap.h">
@@ -227,19 +227,10 @@
     <ClInclude Include="..\Common\Cedar\CedarType.h">
       <Filter>Header Files\Cedar</Filter>
     </ClInclude>
-    <ClInclude Include="..\Common\Cedar\Connection.h">
-      <Filter>Header Files\Cedar</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\Cedar\Hub.h">
-      <Filter>Header Files\Cedar</Filter>
-    </ClInclude>
     <ClInclude Include="..\Common\Cedar\Nat.h">
       <Filter>Header Files\Cedar</Filter>
     </ClInclude>
     <ClInclude Include="..\Common\Cedar\SecureNAT.h">
-      <Filter>Header Files\Cedar</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\Cedar\Session.h">
       <Filter>Header Files\Cedar</Filter>
     </ClInclude>
     <ClInclude Include="..\Common\Cedar\Virtual.h">
@@ -724,6 +715,9 @@
     </ClInclude>
     <ClInclude Include="..\win32\getopt.h">
       <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Cedar\MyConnection.h">
+      <Filter>Header Files\Cedar</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

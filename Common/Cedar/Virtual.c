@@ -1713,14 +1713,14 @@ void TcpRecvForInternet(VH *v, UINT src_ip, UINT src_port, UINT dest_ip, UINT de
 
 	seq = Endian32(tcp->SeqNumber);
 	ack = Endian32(tcp->AckNumber);
-
+/*
 	if (v->HubOption != NULL && v->HubOption->DisableUserModeSecureNAT)
 	{
 		// Disable User-mode NAT
 		SendTcp(v, dest_ip, dest_port, src_ip, src_port,
 			0, seq + 1, TCP_RST | TCP_ACK, 0, 0, NULL, 0);
 		return;
-	}
+	}*/
 
 	// Search for a session for this packet from the NAT table
 	SetNat(&t, NAT_TCP, src_ip, src_port, dest_ip, dest_port, 0, 0);
@@ -3616,11 +3616,12 @@ void VirtualUdpReceived(VH *v, UINT src_ip, UINT dest_ip, void *data, UINT size,
 	else if (IsInNetwork(dest_ip, v->HostIP, v->HostMask) == false)
 	{
 		// Packets to other than local address (that is on the Internet) has been received
+		/*
 		if (v->HubOption != NULL && v->HubOption->DisableUserModeSecureNAT)
 		{
 			// User-mode NAT is disabled
 			return;
-		}
+		}*/
 
 		// User-mode NAT
 		UdpRecvForInternet(v, src_ip, src_port, dest_ip, dest_port, buf, buf_size, false);
@@ -3924,13 +3925,13 @@ void VirtualIcmpEchoRequestReceived(VH *v, UINT src_ip, UINT dst_ip, void *data,
 	}
 
 	//Debug("ICMP: %u\n", size);
-
+/*
 	if (v->HubOption != NULL && v->HubOption->DisableUserModeSecureNAT)
 	{
 		// User-mode NAT is disabled
 		return;
 	}
-
+*/
 	if (v->IcmpRawSocketOk || v->IcmpApiOk)
 	{
 		// Process in the Raw Socket
@@ -5740,6 +5741,7 @@ UINT ServeDhcpDiscover(VH *v, UCHAR *mac, UINT request_ip)
 	if (ret == 0)
 	{
 		// Take an appropriate IP addresses that can be assigned newly
+		/*
 		HUB_OPTION *opt = NatGetHubOption(v);
 
 		if (opt != NULL && opt->SecureNAT_RandomizeAssignIp)
@@ -5749,7 +5751,8 @@ UINT ServeDhcpDiscover(VH *v, UCHAR *mac, UINT request_ip)
 		else
 		{
 			ret = GetFreeDhcpIpAddress(v);
-		}
+		}*/
+		ret = GetFreeDhcpIpAddress(v);
 	}
 
 	return ret;

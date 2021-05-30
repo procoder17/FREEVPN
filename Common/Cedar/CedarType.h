@@ -84,7 +84,6 @@ typedef struct TCPSOCK TCPSOCK;
 typedef struct TCP TCP;
 typedef struct UDP UDP;
 typedef struct BLOCK BLOCK;
-typedef struct CONNECTION CONNECTION;
 
 
 // ==============================================================
